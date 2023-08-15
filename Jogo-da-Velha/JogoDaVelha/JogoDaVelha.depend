@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1620240256 source:c:\users\samue\onedrive\área de trabalho\c\jogodavelha\main.c
+	<gl/glut.h>
+	<string.h>
+	<stdio.h>
+	<locale.h>
+
