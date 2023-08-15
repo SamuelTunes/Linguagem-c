@@ -1,180 +1,180 @@
-/*Essa nossa atividade consiste na construÁ„o de um aplicativo para c·lculos matem·ticos atendendo os seguintes requisitos:
+/*Essa nossa atividade consiste na constru√ß√£o de um aplicativo para c√°lculos matem√°ticos atendendo os seguintes requisitos:
 
-O aplicativo deve ser operacionalizado por meio de menus, sendo obrigatÛria a existÍncia de pelo menos um submenu;
-Deve-se disponibilizar opÁıes para c·lculos aritmÈticos, geomÈtricos e de funÁıes (primeiro grau, segundo grau, etc);
-O cÛdigo deve ser organizado de forma que cada menu e cada opÁ„o esteja sendo implementada por meio de uma funÁ„o.*/
+O aplicativo deve ser operacionalizado por meio de menus, sendo obrigat√≥ria a exist√™ncia de pelo menos um submenu;
+Deve-se disponibilizar op√ß√µes para c√°lculos aritm√©ticos, geom√©tricos e de fun√ß√µes (primeiro grau, segundo grau, etc);
+O c√≥digo deve ser organizado de forma que cada menu e cada op√ß√£o esteja sendo implementada por meio de uma fun√ß√£o.*/
 
 #include <stdio.h>
 #include <locale.h>
 #include <stdlib.h>
 #include <math.h>
 
-//FunÁ„o para AdiÁ„o
+//Fun√ß√£o para Adi√ß√£o
 void adicao(){
     int contador, i;
     float n1=0,result=0;
     printf("\n----------------------------------------");
-    printf("\n**************** ADI«√O ****************");
+    printf("\n**************** ADI√á√ÉO ****************");
     printf("\n----------------------------------------");
-    printf("\n\nQuantidades de n˙meros que ter· na adiÁ„o: ");
+    printf("\n\nQuantidades de n√∫meros que ter√° na adi√ß√£o: ");
     scanf("%d",&contador);
     if(contador>1){
         printf("\n----------------------------------------");
         for(i=0;i<contador; i++){
-            printf("\nInforme o %d n˙mero para a adiÁ„o: ",i+1);
+            printf("\nInforme o %d n√∫mero para a adi√ß√£o: ",i+1);
             scanf("%f", &n1);
             result = result+n1;
                     }
             printf("\n----------------------------------------");
-            printf("\nO resultado da adiÁ„o È: %0.2f",result);
+            printf("\nO resultado da adi√ß√£o √©: %0.2f",result);
                 }
     else{
         printf("\n----------------------------------------");
-        printf("\nQuantidade de n˙meros iv·lida para fazer qualquer operaÁ„o");
+        printf("\nQuantidade de n√∫meros iv√°lida para fazer qualquer opera√ß√£o");
         }
     printf("\n----------------------------------------");
     printf("\n\nAperte qualquer tecla para continuar");
                 }
 
-//FunÁ„o para SubtraÁ„o
+//Fun√ß√£o para Subtra√ß√£o
 void subtracao(){
     float n1, n2, result;
     printf("\n----------------------------------------");
-    printf("\n************** SUBTRA«√O **************");
+    printf("\n************** SUBTRA√á√ÉO **************");
     printf("\n----------------------------------------");
-    printf("\n1∞ n˙mero: ");
+    printf("\n1¬∞ n√∫mero: ");
         scanf("%f", &n1);
-    printf("\n2∞ n˙mero: ");
+    printf("\n2¬∞ n√∫mero: ");
         scanf("%f", &n2);
         result= n1-n2;
     printf("\n----------------------------------------");
-    printf("\nO resultado da subtraÁ„o È: %0.2f", result);
+    printf("\nO resultado da subtra√ß√£o √©: %0.2f", result);
     printf("\n----------------------------------------");
     printf("\n\nAperte qualquer tecla para continuar");
 }
 
-//FunÁ„o para MultiplicaÁ„o
+//Fun√ß√£o para Multiplica√ß√£o
 void multiplicacao(){
    int contador, i;
     float n1=0,result=1;
     printf("\n----------------------------------------");
-    printf("\n************ MULTIPLICA«√O ************");
+    printf("\n************ MULTIPLICA√á√ÉO ************");
     printf("\n----------------------------------------");
-    printf("\n\nQuantidades de n˙meros para a multiplicaÁ„o: ");
+    printf("\n\nQuantidades de n√∫meros para a multiplica√ß√£o: ");
     scanf("%d",&contador);
     if(contador>1){
         printf("\n----------------------------------------");
         for(i=0;i<contador; i++){
-            printf("\nInforme o %d n˙mero para a multiplicaÁ„o: ",i+1);
+            printf("\nInforme o %d n√∫mero para a multiplica√ß√£o: ",i+1);
             scanf("%f", &n1);
             result = result*n1;
                     }
             printf("\n----------------------------------------");
-            printf("\nO resultado da multiplicaÁ„o È: %0.2f",result);
+            printf("\nO resultado da multiplica√ß√£o √©: %0.2f",result);
                 }
     else{
         printf("\n----------------------------------------");
-        printf("\nQuantidade de n˙meros iv·lida para fazer qualquer operaÁ„o");
+        printf("\nQuantidade de n√∫meros iv√°lida para fazer qualquer opera√ß√£o");
         }
     printf("\n----------------------------------------");
     printf("\n\nAperte qualquer tecla para continuar");
 }
 
-//FunÁ„o para Divis„o
+//Fun√ß√£o para Divis√£o
 void divisao(){
 float n1, n2, result;
      printf("\n----------------------------------------");
-     printf("\n*************** DIVIS√O ***************");
+     printf("\n*************** DIVIS√ÉO ***************");
      printf("\n----------------------------------------");
     printf("\nInforme o dividendo: ");
         scanf("%f", &n1);
     printf("\nInforme o divisor: ");
         scanf("%f", &n2);
-        if(n2==0)printf("\nN˙meros incorretos, o divisor deve ser diferente de 0");
+        if(n2==0)printf("\nN√∫meros incorretos, o divisor deve ser diferente de 0");
 
         else
             result= n1/n2;
     printf("\n----------------------------------------");
-    printf("\nO resultado da Divis„o È: %0.2f", result);
+    printf("\nO resultado da Divis√£o √©: %0.2f", result);
     printf("\n----------------------------------------");
     printf("\n\nAperte qualquer tecla para continuar");
 }
 
-//FunÁ„o para Porcentagem
+//Fun√ß√£o para Porcentagem
 void porcentagem(){
     int op;
     float n1, n2, result;
     printf("\n----------------------------------------");
     printf("\n************* PORCENTAGEM *************");
     printf("\n----------------------------------------");
-    printf("\n Deseja fazer qual operaÁ„o com porcentagem?");
-    printf("\n- 1 => Calcular a porcentagem de um n˙mero em relaÁ„o a outro.");
-    printf("\n- 2 => Calcular quanto ser· o n˙mero de acordo com a porcentagem e o total.");
+    printf("\n Deseja fazer qual opera√ß√£o com porcentagem?");
+    printf("\n- 1 => Calcular a porcentagem de um n√∫mero em rela√ß√£o a outro.");
+    printf("\n- 2 => Calcular quanto ser√° o n√∫mero de acordo com a porcentagem e o total.");
     printf("\nSua escolha : ");
     scanf("%d", &op);
         if(op==1)
                 {
                 printf("\n----------------------------------------");
-                printf("\nN˙mero total(100%%): ");
+                printf("\nN√∫mero total(100%%): ");
                     scanf("%f", &n1);
                 printf("\nA quantidade que deseja saber a porcentagem: ");
                     scanf("%f", &n2);
                         result= (n2*100)/n1;
                 printf("\n----------------------------------------");
-                printf("\nO resultado da Porcentagem È: %0.2f %%", result);
+                printf("\nO resultado da Porcentagem √©: %0.2f %%", result);
             }
 
  else if(op==2){
                 printf("\n----------------------------------------");
-                printf("\nN˙mero total(100%%): ");
+                printf("\nN√∫mero total(100%%): ");
                     scanf("%f", &n1);
                 printf("\nPorcentagem(%) que quer: ");
                     scanf("%f", &n2);
                         result= (n2/100)*n1;
                 printf("\n----------------------------------------");
-                printf("\nA parte retirada ser· de: %0.2f", result);
+                printf("\nA parte retirada ser√° de: %0.2f", result);
  }
- else printf("\nOpÁ„o Inv·lida \nPressione qualquer tecla para continuar");
+ else printf("\nOp√ß√£o Inv√°lida \nPressione qualquer tecla para continuar");
 
  printf("\n----------------------------------------");
  printf("\n\nAperte qualquer tecla para continuar");
 }
 
-//FunÁ„o para PotencializaÁ„o
+//Fun√ß√£o para Potencializa√ß√£o
 void potenciacao(){
 float n1, n2, result;
      printf("\n----------------------------------------");
-     printf("\n************* POT NCIA«√O *************");
+     printf("\n************* POT√äNCIA√á√ÉO *************");
      printf("\n----------------------------------------");
-    printf("\n1∞ n˙mero(Base): ");
+    printf("\n1¬∞ n√∫mero(Base): ");
         scanf("%f", &n1);
-    printf("\n2∞ n˙mero(Expoente): ");
+    printf("\n2¬∞ n√∫mero(Expoente): ");
         scanf("%f", &n2);
         pow(n1,n2);
             result= pow(n1,n2);
     printf("\n----------------------------------------");
-    printf("\nO resultado da PotÍnciaÁ„o È: %0.2f", result);
+    printf("\nO resultado da Pot√™ncia√ß√£o √©: %0.2f", result);
     printf("\n----------------------------------------");
     printf("\n\nAperte qualquer tecla para continuar");
 }
 
-//FunÁ„o para Raiz Quadrada
+//Fun√ß√£o para Raiz Quadrada
 void raiz(){
 float n1, result;
      printf("\n----------------------------------------");
      printf("\n************* RAIZ QUADRADA *************");
      printf("\n----------------------------------------");
-     printf("\nN˙mero que ser· realizado a raiz quadrada(x≤): ");
+     printf("\nN√∫mero que ser√° realizado a raiz quadrada(x¬≤): ");
         scanf("%f", &n1);
             result= sqrt(n1);
      printf("\n----------------------------------------");
-     printf("\nO resultado da raiz quadrada de %0.2f È: %0.2f",n1,result);
+     printf("\nO resultado da raiz quadrada de %0.2f √©: %0.2f",n1,result);
      printf("\n----------------------------------------");
      printf("\n\nAperte qualquer tecla para continuar");
 
 }
 
-//FunÁ„o para calcular a geometria do quadrado
+//Fun√ß√£o para calcular a geometria do quadrado
 void quadrado(){
 float n1, per, area;
     printf("\n----------------------------------------");
@@ -185,56 +185,56 @@ float n1, per, area;
         per= n1*4;
         area= n1*n1;
     printf("\n----------------------------------------");
-    printf("\nO perÌmetro do quadrado È: %0.2f cm", per);
-    printf("\nA ·rea do quadrado È: %0.2f cm≤", area);
+    printf("\nO per√≠metro do quadrado √©: %0.2f cm", per);
+    printf("\nA √°rea do quadrado √©: %0.2f cm¬≤", area);
     printf("\n----------------------------------------");
     printf("\n\nAperte qualquer tecla para continuar");
 }
 
-//FunÁ„o para calcular a geometria do ret‚ngulo
+//Fun√ß√£o para calcular a geometria do ret√¢ngulo
 void retangulo(){
 float n1,n2, per, area;
     printf("\n----------------------------------------");
     printf("\n************** QUADRADO **************");
     printf("\n----------------------------------------");
-    printf("\nInforme o valor da largura do ret‚ngulo (em cm): ");
+    printf("\nInforme o valor da largura do ret√¢ngulo (em cm): ");
         scanf("%f", &n1);
-    printf("\nInforme o valor do comprimento do ret‚ngulo (em cm): ");
+    printf("\nInforme o valor do comprimento do ret√¢ngulo (em cm): ");
         scanf("%f", &n2);
         per= (2*n1)+(2*n2);
         area= n1*n2;
     printf("\n----------------------------------------");
-    printf("\nO perÌmetro do quadrado È: %0.2f cm", per);
-    printf("\nA ·rea do quadrado È: %0.2f cm≤", area);
+    printf("\nO per√≠metro do quadrado √©: %0.2f cm", per);
+    printf("\nA √°rea do quadrado √©: %0.2f cm¬≤", area);
     printf("\n----------------------------------------");
     printf("\n\nAperte qualquer tecla para continuar");
 }
 
-//FunÁ„o para calcular a geometria do tri‚ngulo
+//Fun√ß√£o para calcular a geometria do tri√¢ngulo
 void triangulo(){
 int op;
 float n1,n2, per, area, l1,l2;
     printf("\n----------------------------------------");
     printf("\n************** QUADRADO **************");
     printf("\n----------------------------------------");
-    printf("\nInforme o valor da base do tri‚ngulo (em cm): ");
+    printf("\nInforme o valor da base do tri√¢ngulo (em cm): ");
         scanf("%f", &n1);
-    printf("\nInforme o valor da altura do tri‚ngulo (em cm): ");
+    printf("\nInforme o valor da altura do tri√¢ngulo (em cm): ");
         scanf("%f", &n2);
         area= (n1*n2)/2;
-    printf("\nInforme o valor do 1∫ lado (em cm): ");
+    printf("\nInforme o valor do 1¬∫ lado (em cm): ");
         scanf("%f",&l1);
-    printf("\nInforme o valor do 2∫ lado (em cm): ");
+    printf("\nInforme o valor do 2¬∫ lado (em cm): ");
         scanf("%f",&l2);
         per = n1+l1+l2;
     printf("\n----------------------------------------");
-    printf("\nO perÌmetro do quadrado È: %0.2f cm", per);
-    printf("\nA ·rea do quadrado È: %0.2f cm≤", area);
+    printf("\nO per√≠metro do quadrado √©: %0.2f cm", per);
+    printf("\nA √°rea do quadrado √©: %0.2f cm¬≤", area);
     printf("\n----------------------------------------");
     printf("\n\nAperte qualquer tecla para continuar");
 }
 
-//FunÁ„o para calcular a geometria do trapÈzio
+//Fun√ß√£o para calcular a geometria do trap√©zio
 void trapezio(){
 int op;
 float n1,n2, per, area, altura, le,ld;
@@ -242,43 +242,43 @@ float n1,n2, per, area, altura, le,ld;
     printf("\n************** QUADRADO **************");
     printf("\n----------------------------------------");
 
-    printf("\nInforme o valor da base menor do trapÈzio (em cm): ");
+    printf("\nInforme o valor da base menor do trap√©zio (em cm): ");
         scanf("%f", &n2);
 
-    printf("\nInforme o valor da base maior do trapÈzio (em cm): ");
+    printf("\nInforme o valor da base maior do trap√©zio (em cm): ");
         scanf("%f", &n1);
 
-    printf("\nInforme o valor da altura do trapÈzio (em cm): ");
+    printf("\nInforme o valor da altura do trap√©zio (em cm): ");
         scanf("%f",&altura);
 
-    printf("\nInforme o valor do 1∫ lado (em cm): ");
+    printf("\nInforme o valor do 1¬∫ lado (em cm): ");
         scanf("%f",&le);
 
-    printf("\nInforme o valor do 2∫ lado (em cm): ");
+    printf("\nInforme o valor do 2¬∫ lado (em cm): ");
         scanf("%f",&ld);
 
 
         area= ((n1+n2)*altura)/2;
         per = n1+n2+le+ld;
     printf("\n----------------------------------------");
-    printf("\nO perÌmetro do quadrado È: %0.2f cm", per);
-    printf("\nA ·rea do quadrado È: %0.2f cm≤", area);
+    printf("\nO per√≠metro do quadrado √©: %0.2f cm", per);
+    printf("\nA √°rea do quadrado √©: %0.2f cm¬≤", area);
     printf("\n----------------------------------------");
     printf("\n\nAperte qualquer tecla para continuar");
 }
 
-//FunÁ„o para funÁıes de 1∞grau
+//Fun√ß√£o para fun√ß√µes de 1¬∞grau
 void grau1(){
     int a,b, result, cont=3,i, fx;
     printf("\n----------------------------------------");
-    printf("\n************ FUN«√O 1∫GRAU ************");
+    printf("\n************ FUN√á√ÉO 1¬∫GRAU ************");
     printf("\n----------------------------------------");
-    printf("\nInforme o valor da posiÁ„o - A: ");
+    printf("\nInforme o valor da posi√ß√£o - A: ");
     scanf("%d", &a);
-    printf("\nInforme o valor da posiÁ„o - B: ");
+    printf("\nInforme o valor da posi√ß√£o - B: ");
     scanf("%d", &b);
     printf("\n----------------------------------------");
-    printf("\nTabela de valores possÌveis valores de x e y");
+    printf("\nTabela de valores poss√≠veis valores de x e y");
     printf("\n-------------");
     printf("\n X  |   Y\n");
         while(cont>-3){
@@ -290,10 +290,10 @@ void grau1(){
     }
     printf("\n-------------");
     printf("\n\n----------------------------------------");
-    printf("\nFunÁ„o ser·: f(x)=%dx + %d ",a,b);
+    printf("\nFun√ß√£o ser√°: f(x)=%dx + %d ",a,b);
     printf("\n----------------------------------------");
-    printf("\nDeseja escrever algum n˙mero para fazer a operaÁ„o?");
-    printf("\nSim - 1    |    N„o - Qualquer tecla para continuar\n");
+    printf("\nDeseja escrever algum n√∫mero para fazer a opera√ß√£o?");
+    printf("\nSim - 1    |    N√£o - Qualquer tecla para continuar\n");
     printf("Sua escolha: ");
     scanf("%d",&i);
     printf("\n----------------------------------------");
@@ -301,28 +301,28 @@ void grau1(){
             scanf("%d",&fx);
             result = (fx*a) + b;
             printf("\n\n----------------------------------------");
-            printf("\nFunÁ„o ser·: (%d,%d)",fx,result);
+            printf("\nFun√ß√£o ser√°: (%d,%d)",fx,result);
             printf("\n\n----------------------------------------");
     }
  printf("\n\nAperte qualquer tecla para continuar");
  printf("\n\n----------------------------------------");
 }
 
-//FunÁ„o para funÁıes de 2∞grau
+//Fun√ß√£o para fun√ß√µes de 2¬∞grau
 void grau2(){
 int a,b,c,result,cont=3,i,fx;
     printf("\n----------------------------------------");
-    printf("\n************ FUN«√O 2∫GRAU ************");
+    printf("\n************ FUN√á√ÉO 2¬∫GRAU ************");
     printf("\n----------------------------------------");
-    printf("\nInforme o valor da posiÁ„o - A: ");
+    printf("\nInforme o valor da posi√ß√£o - A: ");
         scanf("%d", &a);
-    printf("\nInforme o valor da posiÁ„o - B: ");
+    printf("\nInforme o valor da posi√ß√£o - B: ");
         scanf("%d", &b);
-    printf("\nInforme o valor da posiÁ„o - C: ");
+    printf("\nInforme o valor da posi√ß√£o - C: ");
         scanf("%d", &c);
 
     printf("\n----------------------------------------");
-    printf("\nTabela de valores possÌveis valores de x e y");
+    printf("\nTabela de valores poss√≠veis valores de x e y");
     printf("\n-------------");
     printf("\n X  |   Y\n");
         while(cont>-3){
@@ -334,17 +334,17 @@ int a,b,c,result,cont=3,i,fx;
     }
     printf("\n-------------");
     printf("\n\n----------------------------------------");
-    printf("\nFunÁ„o ser·: f(x)= %dx≤ + %dx + %d ",a,b,c);
+    printf("\nFun√ß√£o ser√°: f(x)= %dx¬≤ + %dx + %d ",a,b,c);
     printf("\n----------------------------------------");
-    printf("\nDeseja escrever algum n˙mero para fazer a operaÁ„o?");
-    printf("\nSim - 1   |   N„o - Qualquer tecla para continuar\n");
+    printf("\nDeseja escrever algum n√∫mero para fazer a opera√ß√£o?");
+    printf("\nSim - 1   |   N√£o - Qualquer tecla para continuar\n");
     printf("\nSua escolha: ");
     scanf("%d",&i);
     printf("\n----------------------------------------");
         if(i==1){printf("\nDigite o valor de f(x): ");
             scanf("%d",&fx);
             result = ((fx*fx)*a)+(fx*b) + c;
-            printf("\nFunÁ„o ser·: (%d,%d)",fx,result);
+            printf("\nFun√ß√£o ser√°: (%d,%d)",fx,result);
             printf("\n\n----------------------------------------");
     }
  printf("\n\nAperte qualquer tecla para continuar");
@@ -355,56 +355,56 @@ void calculoAritmetico(){
 int n;
 do{
         system("cls");
-        printf("\n*** MENU CALCULO ARITM…TICO ***");
-        printf("\n1 - AdiÁ„o");
-        printf("\n2 - SubtraÁ„o");
-        printf("\n3 - MultiplicaÁ„o");
-        printf("\n4 - Divis„o");
+        printf("\n*** MENU CALCULO ARITM√âTICO ***");
+        printf("\n1 - Adi√ß√£o");
+        printf("\n2 - Subtra√ß√£o");
+        printf("\n3 - Multiplica√ß√£o");
+        printf("\n4 - Divis√£o");
         printf("\n5 - Porcentagem");
-        printf("\n6 - PotÍnciaÁ„o");
+        printf("\n6 - Pot√™ncia√ß√£o");
         printf("\n7 - Raiz Quadrada");
         printf("\n8 - Voltar");
-        printf("\nOpÁ„o escolhida: ");
+        printf("\nOp√ß√£o escolhida: ");
         scanf("%d",&n);
          switch(n){
             case 1:
-                printf("\nUsu·rio escolheu a opÁ„o 1");
+                printf("\nUsu√°rio escolheu a op√ß√£o 1");
                 adicao();
                 getch();
                 break;
 
             case 2:
-                printf("\nUsu·rio escolheu a opÁ„o 2");
+                printf("\nUsu√°rio escolheu a op√ß√£o 2");
                 subtracao();
                 getch();
                 break;
 
             case 3:
-                printf("\nUsu·rio escolheu a opÁ„o 3");
+                printf("\nUsu√°rio escolheu a op√ß√£o 3");
                 multiplicacao();
                 getch();
                 break;
 
             case 4:
-                printf("\nUsu·rio escolheu a opÁ„o 4");
+                printf("\nUsu√°rio escolheu a op√ß√£o 4");
                 divisao();
                 getch();
                 break;
 
             case 5:
-                printf("\nUsu·rio escolheu a opÁ„o 5");
+                printf("\nUsu√°rio escolheu a op√ß√£o 5");
                 porcentagem();
                 getch();
                 break;
 
             case 6:
-                printf("\nUsu·rio escolheu a opÁ„o 6");
+                printf("\nUsu√°rio escolheu a op√ß√£o 6");
                 potenciacao();
                 getch();
                 break;
 
             case 7:
-                printf("\nUsu·rio escolheu a opÁ„o 7");
+                printf("\nUsu√°rio escolheu a op√ß√£o 7");
                 raiz();
                 getch();
                 break;
@@ -415,7 +415,7 @@ do{
 
 
             default:
-                printf("\nOpÁ„o inv·lida!");
+                printf("\nOp√ß√£o inv√°lida!");
                 break;
         }
     }
@@ -426,35 +426,35 @@ void calculoGeometrico(){
     int n;
 do{
         system("cls");
-        printf("\n*** MENU CALCULO GEOM…TRICO ***");
+        printf("\n*** MENU CALCULO GEOM√âTRICO ***");
         printf("\n1 - Quadrado");
-        printf("\n2 - Ret‚ngulo");
-        printf("\n3 - Tri‚ngulo");
-        printf("\n4 - TrapÈzio");
+        printf("\n2 - Ret√¢ngulo");
+        printf("\n3 - Tri√¢ngulo");
+        printf("\n4 - Trap√©zio");
         printf("\n5 - Voltar");
-        printf("\nOpÁ„o escolhida: ");
+        printf("\nOp√ß√£o escolhida: ");
         scanf("%d",&n);
          switch(n){
             case 1:
-                printf("\nUsu·rio escolheu a opÁ„o 1");
+                printf("\nUsu√°rio escolheu a op√ß√£o 1");
                 quadrado();
                 getch();
                 break;
 
             case 2:
-                printf("\nUsu·rio escolheu a opÁ„o 2");
+                printf("\nUsu√°rio escolheu a op√ß√£o 2");
                 retangulo();
                 getch();
                 break;
 
             case 3:
-                printf("\nUsu·rio escolheu a opÁ„o 3");
+                printf("\nUsu√°rio escolheu a op√ß√£o 3");
                 triangulo();
                 getch();
                 break;
 
             case 4:
-                printf("\nUsu·rio escolheu a opÁ„o 4");
+                printf("\nUsu√°rio escolheu a op√ß√£o 4");
                 trapezio();
                 getch();
                 break;
@@ -464,7 +464,7 @@ do{
                 break;
 
             default:
-                printf("\nOpÁ„o inv·lida!");
+                printf("\nOp√ß√£o inv√°lida!");
                 break;
         }
     }
@@ -475,21 +475,21 @@ void funcoes(){
     int n;
 do{
         system("cls");
-        printf("\n*** MENU CALCULO DE FUN«√O ***");
-        printf("\n1 - 1∞ grau");
-        printf("\n2 - 2∞ grau");
+        printf("\n*** MENU CALCULO DE FUN√á√ÉO ***");
+        printf("\n1 - 1¬∞ grau");
+        printf("\n2 - 2¬∞ grau");
         printf("\n3 - Voltar");
-        printf("\nOpÁ„o escolhida: ");
+        printf("\nOp√ß√£o escolhida: ");
         scanf("%d",&n);
          switch(n){
             case 1:
-                printf("\nUsu·rio escolheu a opÁ„o 1");
+                printf("\nUsu√°rio escolheu a op√ß√£o 1");
                 grau1();
                 getch();
                 break;
 
             case 2:
-                printf("\nUsu·rio escolheu a opÁ„o 2");
+                printf("\nUsu√°rio escolheu a op√ß√£o 2");
                 grau2();
                 getch();
                 break;
@@ -499,7 +499,7 @@ do{
                 break;
 
             default:
-                printf("\nOpÁ„o inv·lida!");
+                printf("\nOp√ß√£o inv√°lida!");
                 break;
         }
     }
@@ -513,31 +513,31 @@ int main()
     do{
         system("cls");
         printf("\n*** MENU PRINCIPAL ***");
-        printf("\n1 - C·lculo AritmÈtico");
-        printf("\n2 - C·lculo GeomÈtrico");
-        printf("\n3 - FunÁıes");
+        printf("\n1 - C√°lculo Aritm√©tico");
+        printf("\n2 - C√°lculo Geom√©trico");
+        printf("\n3 - Fun√ß√µes");
         printf("\n4 - Sair");
-        printf("\nDigite sua opÁ„o: ");
+        printf("\nDigite sua op√ß√£o: ");
         scanf("%d", &numero);
         switch(numero){
             case 1:
-                printf("\nUsu·rio escolheu a opÁ„o 1");
+                printf("\nUsu√°rio escolheu a op√ß√£o 1");
                 calculoAritmetico();
                 getch();
                 break;
             case 2:
-                printf("\nUsu·rio escolheu a opÁ„o 2");
+                printf("\nUsu√°rio escolheu a op√ß√£o 2");
                 calculoGeometrico();
                 getch();
                 break;
             case 3:
-                printf("\nUsu·rio escolheu a opÁ„o 3");
+                printf("\nUsu√°rio escolheu a op√ß√£o 3");
                 funcoes();
                 break;
             case 4:
                 break;
             default:
-                printf("\nOpÁ„o inv·lida!");
+                printf("\nOp√ß√£o inv√°lida!");
                 break;
         }
     }while(numero!=4);
